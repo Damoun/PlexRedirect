@@ -53,18 +53,18 @@
 
         function checkServer() {
             var p = new Ping();
-            var server = document.domain //Try to get it automagically, but you can manually specify this
+            var server = document.domain; //Try to get it automagically, but you can manually specify this
             var timeout = 2000; //Milliseconds
             var body = document.getElementsByTagName("body")[0];
             p.ping(server+":32400", function(data) {
                 var serverMsg = document.getElementById( "server-status-msg" );
                 var serverImg = document.getElementById( "server-status-img" );
                 if (data < 1000){
-                    serverMsg.innerHTML ='Up and reachable';
+                    serverMsg.innerHTML = 'Disponible';
                     serverImg.src = "assets/img/server_up.png";
                     body.addClass('online').removeClass("offline");
                 }else{
-                    serverMsg.innerHTML = 'Down and unreachable';
+                    serverMsg.innerHTML = 'Indisponible';
                     serverImg.src = "assets/img/server_down.png";
                 }
             }, timeout);
@@ -101,7 +101,7 @@
           <a class="link-card" href="http://app.plex.tv/web/app" target="_top">
 						<span class="link-cnt">
 							<img src="assets/img/s01.png" width="60" alt="">
-							<h4>Access YOUR SERVER NAME HERE</h4>
+							<h4>Accéder à YOUR SERVER NAME HERE</h4>
 						</span>
 					</a>
         </div><!--/col-lg-12 -->
@@ -110,7 +110,7 @@
           <a class="link-card" href="PLEXREQUESTS LINK HERE" target="_top">
 						<span class="link-cnt">
 							<img src="assets/img/s02.png" width="60" alt="">
-							<h4>Request New Content</h4>
+							<h4>Demander un Film ou une Série</h4>
 						</span>
 					</a>
         </div><!--/col-lg-12 -->
@@ -119,7 +119,7 @@
           <a class="link-card" href="PLEXEMAIL LINK HERE" target="_top">
 						<span class="link-cnt">
 							<img src="assets/img/s03.png" width="60" alt="">
-							<h4>Check What's New</h4>
+							<h4>Nouveautés</h4>
 						</span>
 					</a>
         </div><!--/col-lg-12 -->
